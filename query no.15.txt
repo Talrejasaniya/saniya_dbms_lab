@@ -1,0 +1,17 @@
+create table student_details4
+(studid integer(10),studname char(20),studschool char(20),studhobby char(8),studstd integer(10),studgender char(9),maths int(2),sci int(2),eng int(2),fees int(4));
+insert into student_details4 values(1,'ajit','xavier','dance',5,'m',55,45,67,35000);
+insert into student_details4 values(2,'alisha','sharda','singing',5,'f',45,67,67,36000);
+insert into student_details4 values(3,'pratixa','a_one','cricket',7,'f',34,56,35,20000);
+insert into student_details4 values(4,'deepam','h.b.k','painting',6,'f',45,78,45,24000);
+insert into student_details4 values(5,'nisha','santkabir','cricket',7,'f',56,86,54,45899);
+insert into student_details4 values(6,'anya','xavier','painting',9,'f',45,67,67,23000);
+insert into student_details4 values(7,'raj','a-one','singing',9,'m',34,55,67,46000);
+insert into student_details4 values(8,'monish','a-one','drawing',7,'m',56,67,67,35000);
+insert into student_details4 values(9,'ram','sharda','dance',9,'m',56,34,78,43000);
+insert into student_details4 values(10,'mihir','a-one','dance',8,'m',67,56,45,76000);
+select studname,studgender
+from student_details4
+where studgender='m'
+
+
