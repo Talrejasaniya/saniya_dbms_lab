@@ -1,0 +1,14 @@
+create table student_details7
+(studid integer(10),studname char(20),studschool char(20),studhobby char(8),studstd integer(10),studgender char(9));
+insert into student_details7 values(1,'ajit','xavier','dance',5,'m');
+insert into student_details7 values(2,'alisha','sharda','singing',5,'f');
+insert into student_details7 values(3,'pratixa','a_one','cricket',7,'f');
+insert into student_details7 values(4,'deepam','h.b.k','painting',6,'g');
+insert into student_details7 values(5,'nisha','santkabir','cricket',7,'j');
+insert into student_details7 values(6,'anya','xavier','painting',9,'k');
+insert into student_details7 values(7,'raj','a-one','singing',9,'o');
+insert into student_details7 values(8,'monish','a-one','drawing',7,'o');
+insert into student_details7 values(9,'ram','sharda','dance',9,'h');
+insert into student_details7 values(10,'mihir','a-one','dance',8,'h');
+select studname from student_details7 
+where studname not like 'a%' or  'e%' or 'i%' or 'o%' or 'u%' ;
