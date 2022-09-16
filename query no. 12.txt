@@ -1,0 +1,21 @@
+create table student_details6
+(studid integer(10),studname char(20),studschool char(20),studhobby char(8),studstd integer(10),studgender char(9));
+insert into student_details6 values(1,'ajit','xavier','dance',5,'m');
+insert into student_details6 values(2,'alisha','sharda','singing',5,'f');
+insert into student_details6 values(3,'pratixa','a_one','cricket',7,'f');
+insert into student_details6 values(4,'deepam','h.b.k','painting',6,'g');
+insert into student_details6 values(5,'nisha','santkabir','cricket',7,'j');
+insert into student_details6 values(6,'anya','xavier','painting',9,'k');
+insert into student_details6 values(7,'raj','a-one','singing',9,'o');
+insert into student_details6 values(8,'monish','a-one','drawing',7,'o');
+insert into student_details6 values(9,'ram','sharda','dance',9,'h');
+insert into student_details6 values(10,'mihir','a-one','dance',8,'h');
+alter table student_details6 add maths integer (2);
+alter table student_details6 add sci integer (2);
+alter table student_details6 add eng integer (2);
+alter table student_details6 add fees integer (5);
+update student_details6 set fees='5000' where studstd='5';
+update student_details6 set fees='6000' where studstd='6';
+update student_details6 set fees='7000' where studstd='7';
+update student_details6 set fees='8000' where studstd='8';
+update student_details6 set fees='9000' where studstd='9';
