@@ -1,0 +1,24 @@
+16.select studname from student_details5
+where studgender='m' and studschool='sharda';
+17.select * from student_details6 where studhobby='drawing' and studschool='a-one';
+18.select sum(fees) from student_details7;
+19.select distinct fees from student_details9;
+20.select min(fees) from student_details2;
+20.select max(fees) from student_details2;
+21.alter table student_details3 add totalmarks number(7);
+update student_details3 set totalmarks=maths+sci+eng where studid=1;
+22.select * from student_details where studgender='f' and studschool='sharda';
+23.create table stud1 as select*from student_details1;
+24.create table stud2 as select*from student_details2 where studstd=5;
+25.delete from student_details4 where studschool='a-one';
+26.update student_details8 set studschool='dbs' where studschool='a-one';
+27.update student_details9 set fees=38000 where fees=35000;
+29.delete from student_details92 where maths<50 or sci<50 or eng<50;
+30.delete from student_details91 where studstd='5' and studschool='sharda';
+31.
+32.update student_details92 set studgender='male' where studgender='m';
+update student_details92 set studgender='female' where studgender='f';
+33.alter table student_details4 add totalmarks number(7);
+update student_details4 set totalmarks=maths+sci+eng where studid='1';
+34.select count(studid) from student_details5;
+35.alter table student_details3 drop column fees;
