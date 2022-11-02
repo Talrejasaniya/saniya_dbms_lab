@@ -1,0 +1,65 @@
+**********Exercise 2 *******************
+
+create table laptop
+(cID integer(1),company varchar2(10),model varchar2(15),price integer(6),processor varchar2(2),storage varchar2(3));
+insert into laptop values (1,'Dell','Alienware',75000,'i5','SSD');
+insert into laptop values (2,'Dell','Chromebook',60000,'i3','HDD');
+insert into laptop values (3,'Acer','Chromebook',52000,'i3','HDD');
+insert into laptop values (4,'Acer','Predator',62000,'i3','HDD');
+insert into laptop values (5,'HP','Notebook',51000,'i3','HDD');
+insert into laptop values (6,'Apple','MacBookAir',85000,'i7','SSD');
+insert into laptop values (7,'Lenovo','IdeaBook',74000,'i7','SSD');
+insert into laptop values (8,'Lenovo','IdeaBook',68000,'i5','HDD');
+insert into laptop values (9,'Dell','NoteBook',52000,'i3','HDD');
+insert into laptop values (10,'Apple','MacBook',95000,'i9','SSD');
+insert into laptop values (11,'HP','Omen',89000,'i7','SSD');
+insert into laptop values (12,'Acer','NoteBook',73000,'i7','SSD');
+insert into laptop values (13,'HP','Omen',79000,'i7','SSD');
+insert into laptop values (14,'Apple','MacBookPro',110000,'i9','SSD');
+insert into laptop values (15,'Lenovo','Legion',87000,'i9','HDD');
+
+
+****************Queries********************
+
+1. select company from laptop;
+2. select cID from laptop where company='Apple';
+3. SELECT cID from laptop where model='NoteBook';
+4. SELECT cID from laptop where price > 80000;
+5. SELECT cID from laptop where model='Chromebook';
+6. SELECT cID from laptop where storage='SSD';
+7. SELECT processor,price from laptop;
+8. SELECT cID from laptop where processor>'i7';
+9. SELECT*from laptop order by price;
+10. SELECT*from laptop order by price desc ;
+11. SELECT*from laptop order by  processor;
+12. SELECT*from laptop where company='Acer' and model='Predator';
+13. SELECT*from laptop where company='Dell' and model='Chromebook' and price<60000;
+14. UPDATE laptop set price=price+5000 where company='Apple';
+15. select min(price) from laptop;
+  . select max(price) from laptop; 
+  . select sum(price) from laptop;
+16. select  price,company from laptop where price=(select min(price) from laptop);
+  . select  price,company from laptop where price=(select max(price) from laptop);
+17. select company from laptop where company like 'A%';
+18. select model from laptop where model like 'C%';
+19. select sum(price) from laptop WHERE processor like 'i5';
+  . select sum(price) from laptop WHERE processor like 'i3';
+  . select sum(price) from laptop WHERE processor like 'i7';
+  . select sum(price) from laptop WHERE processor like 'i9';
+20. SELECT*from laptop where company='Dell' and   price between 70000 and 80000;
+21. delete  from laptop where price<55000; 
+22. create table laptop1 as select*from laptop where company='HP';
+23. UPDATE laptop set price=price-3000 where processor='i3';
+24. select COUNT(storage) from laptop where storage='HDD';
+  . select COUNT(storage) from laptop where storage='SSD';
+25. alter table laptop modify processor varchar2(6);
+  . UPDATE laptop set processor='Intel3' where processor='i3';
+  . UPDATE laptop set processor='Intel5' where processor='i5';
+  . UPDATE laptop set processor='Intel7' where processor='i7';
+  . UPDATE laptop set processor='Intel9' where processor='i9';
+26. 
+27. delete  from laptop where company='Acer';
+28.  
+29. SELECT*from laptop where cID BETWEEN 7 and 14
+30. SELECT*from laptop order by cID;
+31. SELECT*from laptop order by cID DESC;
