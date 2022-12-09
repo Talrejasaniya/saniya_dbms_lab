@@ -1,0 +1,31 @@
+create table book(bid number(3) PRIMARY KEY, title varchar(20), isbn varchar(20) NOT NULL, price number(4), authorid int REFERENCES author (authorid));
+
+insert into book values (1, 'DBMS', '987-32-4332', 749, 100);
+insert into book values (2, 'WD', '987-31-4332', 549, 101);
+insert into book values (3, 'FOP', '987-30-4332', 649, 102);
+insert into book values (4, 'MCA', '987-29-4332', 749, 103);
+insert into book values (5, 'CS', '987-28-4332', 449, 104);
+insert into book values (6, 'DM', '987-27-4332', 649, 105);
+
+create table author
+(authorid number(3) PRIMARY KEY, aname varchar(30), experience varchar(3), address varchar(100), mobile number(10));
+
+insert into author values (100, 'Shakespeare', '20', 'Startford', 1234567890);
+insert into author values (101, 'Agatha Christie', '16', 'WinterBrook', 4567821354);
+insert into author values (102, 'Chetan Bhagat', '10', 'Singapore', 4562178652);
+insert into author values (103, 'Khushwant Singh', '15', 'Lahore', 6548721354);
+insert into author values (104, 'R.K. Narayan', '21', 'Chennai', 4521035745);
+insert into author values (105, 'Ruskin Bond', '9', 'Dehradun', 1678612581);
+
+select length ('Shakespeare') from author;
+select bid, concat(title,price) from book;
+select  substr('shakespeare',2,5) from author;
+select replace('shakespeare','shake','golden') from author;
+select upper('shakespeare') from author;
+select lower('shakespeare') from author;
+select mod(749,100) from book;
+select round(749,100) from book;
+select trunc(749,100) from book;
+select abs(100) from book;
+select sqrt(100) from book;
+
